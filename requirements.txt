@@ -1,0 +1,6 @@
+tensorflow
+nltk
+tqdm
+cached_property
+torch
+torchvision

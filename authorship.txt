@@ -1,0 +1,70 @@
+In this document, we lay out the authorship of our code, specifically which
+files were copied from others and what changes we have made.
+
+Files with a comment to the right were copied or adapted from other sources.
+Links to those sources are provided at the bottom of this document. All other
+listed files contain original content.
+
+Copied or adapted files each have further information about the source in
+their header comments.
+
+├── build
+├── CNNDailyMail
+│   ├──__init__.py
+│   ├──cnn_daily_mail.py
+│   └──dataset.py
+├── config
+│   ├──__init__.py
+│   ├──config.ini
+│   └──Configuration.py
+├── data
+│   ├──__init__.py                              Adapted slightly from (1)(data.py)
+│   ├──batch.py                                 Based on (1)(batcher.py)
+│   ├──dataset_groups.py
+│   ├──dataset_types.py
+│   ├──glove.py                                 Based on (1)(data.py)
+│   ├──tiny_dataset.py
+│   └──vocab.py                                 Adapted slightly from (1)(data.py)
+├── dist
+├── evaluation
+│   ├──rouge                                    Copied from (2)
+│   ├──evaluator.py                             Heavily adapted from (4)(training_ptr_gen/train.py)
+│   └──run.py
+├── models
+│   ├──__init__.py
+│   ├──beam_searcher.py                         Refactored and slightly modified from (3)(transformer/Translator.py)
+│   ├──hyperparameters.py
+│   ├──model_types.py
+│   ├──pointer_generator.py                     Based on (1)(attention_decoder.py) and (3)(training_ptr_gen/model.py)
+│   ├──summarizer.py                            Heavily adapted from (3)(transformer/Translator.py)
+│   ├──transformer_baseline.py                  Model saving/loading adapted from (4)(training_ptr_gen/train.py)
+│   └──transformer_pointer.py                   Model saving/loading adapted from (4)(training_ptr_gen/train.py)
+├── NYTDataset
+│   ├──__init__.py
+│   ├──dataset.py
+│   ├──nyt.py
+│   └──preprocess_nyt.py
+├── training
+│   ├──__init__.py
+│   ├──run.py
+│   └──trainer.py                               Adapted from (4)(training_ptr_gen/train.py)
+├── transformer                                 Copied from (3), modified Optim.py, Models.py, and Beam.py
+├── utils
+│   ├──__init__.py
+│   └──tensorboard.py                           Based on (5)
+├──run.sh
+└──setup.py
+
+
+Source Links:
+
+(1) Github abisee
+    https://github.com/abisee/pointer-generator/blob/master/data.py
+(2) Github Google Research
+    https://github.com/google-research/google-research/tree/master/rouge
+(3) Github jadore801120
+    https://github.com/jadore801120/attention-is-all-you-need-pytorch
+(4) Github atulkum
+    https://github.com/atulkum/pointer_summarizer
+(5) Github gyglim
+    https://gist.github.com/gyglim/1f8dfb1b5c82627ae3efcfbbadb9f514
